@@ -1,6 +1,7 @@
 plugins {
-	kotlin("jvm") version "2.0.20"
-	kotlin("plugin.spring") version "2.0.20"
+	val kotlinVersion = "1.9.24"
+	kotlin("jvm") version kotlinVersion
+	kotlin("plugin.spring") version kotlinVersion
 	id("org.springframework.boot") version "3.3.4"
 	id("io.spring.dependency-management") version "1.1.6"
 }
@@ -24,6 +25,7 @@ extra["springCloudVersion"] = "2023.0.3"
 dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.springframework.cloud:spring-cloud-config-server")
+
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
